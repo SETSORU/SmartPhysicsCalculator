@@ -1,5 +1,6 @@
 package com.example.smartphysicscalculator.ui;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,16 +14,17 @@ import com.example.smartphysicscalculator.models.RVName;
 import java.util.List;
 
 
-public class NameAdapter extends RecyclerView.Adapter<NameViewHolder> {
+public class NameAdapter extends RecyclerView.Adapter<NameViewHolder>  {
     private List<RVName> names;
+    private OnNameListener onNameListener;
 
-    public NameAdapter( List<RVName> names) { this.names = names; }
+    public NameAdapter( List<RVName> names, OnNameListener onNameListener) { this.names = names; this.onNameListener = onNameListener; }
 
     @NonNull
     @Override
     public NameViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_name_list, parent, false);
-        return new NameViewHolder(view);
+        return new NameViewHolder(view, onNameListener);
     }
 
     @Override
@@ -34,6 +36,10 @@ public class NameAdapter extends RecyclerView.Adapter<NameViewHolder> {
     @Override
     public int getItemCount() {
         return names.size();
+    }
+
+    public interface OnNameListener{
+        void onNameClick(int position);
     }
 }
 

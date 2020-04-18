@@ -9,16 +9,21 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.smartphysicscalculator.R;
 import com.example.smartphysicscalculator.models.RVName;
 
-public class NameViewHolder extends RecyclerView.ViewHolder {
+public class NameViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
     TextView tv_item_name;
-    TextView tv_item_formula;
-    public NameViewHolder(@NonNull View itemView) {
+    NameAdapter.OnNameListener onNameListener;
+    public NameViewHolder(@NonNull View itemView, NameAdapter.OnNameListener onNameListener) {
         super(itemView);
        tv_item_name = itemView.findViewById(R.id.tv_item_name);
-       tv_item_formula = itemView.findViewById(R.id.tv_item_formula);
+       this.onNameListener = onNameListener;
+       itemView.setOnClickListener(this);
     }
     public void onBind (RVName name){
         tv_item_name.setText(name.getName());
-        tv_item_formula.setText(name.getFormula());
+    }
+
+    @Override
+    public void onClick(View v) {
+        onNameListener.onNameClick(getAdapterPosition());
     }
 }
