@@ -1,11 +1,13 @@
-package com.example.smartphysicscalculator.ui;
+package com.example.smartphysicscalculator.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.smartphysicscalculator.activities.DisplacementActivity;
 import com.example.smartphysicscalculator.R;
 import com.example.smartphysicscalculator.models.RVName;
 import com.example.smartphysicscalculator.ui.NameAdapter;
@@ -43,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements NameAdapter.OnNam
 
     @Override
     public void onNameClick(int position) {
-
+        names.get(position);
+        Intent intent = new Intent(this, DisplacementActivity.class);
+        intent.putExtra(DisplacementActivity.KEY_ACTIVITY, position);
+        startActivity(intent);
     }
 }
