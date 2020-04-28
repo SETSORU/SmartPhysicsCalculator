@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.DisplacementActivity"
+            android:name=".ui.activities.CalculationActivity"
             android:label="@string/title_activity_displacement"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".ui.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
