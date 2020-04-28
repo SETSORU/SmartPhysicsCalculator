@@ -12,24 +12,24 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.smartphysicscalculator.R;
 import com.example.smartphysicscalculator.ui.base.BaseFragment;
 
-public class TimeFragment extends BaseFragment {
+public class UniAccDisplacementTimeFragment extends BaseFragment {
 
-    private TimeViewModel mViewModel;
+    private UniAccDisplacementTimeViewModel mViewModel;
 
-    public static TimeFragment newInstance() {
-        return new TimeFragment();
+    public static UniAccDisplacementTimeFragment newInstance() {
+        return new UniAccDisplacementTimeFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.time_fragment, container, false);
+        return inflater.inflate(R.layout.uni_acc_displacement_time_fragment, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(TimeViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(UniAccDisplacementTimeViewModel.class);
         // TODO: Use the ViewModel
     }
 

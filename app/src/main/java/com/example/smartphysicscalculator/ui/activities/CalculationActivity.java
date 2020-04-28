@@ -2,19 +2,19 @@ package com.example.smartphysicscalculator.ui.activities;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
 import com.example.smartphysicscalculator.R;
-import com.example.smartphysicscalculator.ui.base.BaseFragment;
+import com.example.smartphysicscalculator.ui.adapters.SectionsPagerAdapter;
 import com.example.smartphysicscalculator.ui.fragments.DisplacementFragment;
 import com.example.smartphysicscalculator.ui.fragments.TimeFragment;
+import com.example.smartphysicscalculator.ui.fragments.UniAccDisplacementAccelerationFragment;
+import com.example.smartphysicscalculator.ui.fragments.UniAccDisplacementFragment;
+import com.example.smartphysicscalculator.ui.fragments.UniAccDisplacementTimeFragment;
+import com.example.smartphysicscalculator.ui.fragments.UniAccDisplacementVelocityFragment;
 import com.example.smartphysicscalculator.ui.fragments.VelocityFragment;
 import com.google.android.material.tabs.TabLayout;
-
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.View;
-
-import com.example.smartphysicscalculator.ui.adapters.SectionsPagerAdapter;
 
 import java.util.Arrays;
 
@@ -33,9 +33,10 @@ public class CalculationActivity extends AppCompatActivity {
                 break;
             }
             case 1: {
-                sectionsPagerAdapter.setList(Arrays.<BaseFragment>asList(DisplacementFragment.newInstance(), DisplacementFragment.newInstance(),DisplacementFragment.newInstance()));
+                sectionsPagerAdapter.setList(Arrays.asList(UniAccDisplacementFragment.newInstance(), UniAccDisplacementVelocityFragment.newInstance(), UniAccDisplacementAccelerationFragment.newInstance(), UniAccDisplacementTimeFragment.newInstance()));
                 break;
             }
+
         }
         ViewPager viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(sectionsPagerAdapter);

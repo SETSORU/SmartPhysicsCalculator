@@ -1,15 +1,15 @@
 package com.example.smartphysicscalculator.ui.activities;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-
 import com.example.smartphysicscalculator.R;
 import com.example.smartphysicscalculator.models.RVName;
-import com.example.smartphysicscalculator.ui.NameAdapter;
+import com.example.smartphysicscalculator.ui.adapters.NameAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,9 +37,12 @@ public class MainActivity extends AppCompatActivity implements NameAdapter.OnNam
         names.add(new RVName("Путь при равноускоренном движении, если известно ускорение"));
         names.add(new RVName("Уравнение скорости при равноускоренном движении"));
         names.add(new RVName("Уровнение движения"));
-        names.add(new RVName("Первый закон Ньютона"));
         names.add(new RVName("Второй закон Ньютона"));
         names.add(new RVName("Сила тяжести тела"));
+        names.add(new RVName("Закон Всемирного тяготения"));
+        names.add(new RVName("Сила трения скольжения тела"));
+        names.add(new RVName("Сила Архимеда"));
+        names.add(new RVName("Сила Упругости"));
     }
 
     @Override
