@@ -15,29 +15,29 @@ import android.view.ViewGroup;
 import com.example.smartphysicscalculator.R;
 import com.example.smartphysicscalculator.ui.base.BaseFragment;
 
-public class DisplacementFragment extends BaseFragment {
+public class TimeFragment extends BaseFragment {
 
-    private DisplacementViewModel mViewModel;
+    private TimeViewModel mViewModel;
 
-    public static DisplacementFragment newInstance() {
-        return new DisplacementFragment();
+    public static TimeFragment newInstance() {
+        return new TimeFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.displacement_fragment, container, false);
+        return inflater.inflate(R.layout.time_fragment, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(DisplacementViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(TimeViewModel.class);
         // TODO: Use the ViewModel
     }
 
     @Override
     public String getName() {
-        return "ПУТЬ (S)";
+        return "ВРЕМЯ (t)";
     }
 }

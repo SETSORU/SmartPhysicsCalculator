@@ -15,29 +15,29 @@ import android.view.ViewGroup;
 import com.example.smartphysicscalculator.R;
 import com.example.smartphysicscalculator.ui.base.BaseFragment;
 
-public class DisplacementFragment extends BaseFragment {
+public class VelocityFragment extends BaseFragment {
 
-    private DisplacementViewModel mViewModel;
+    private VelocityViewModel mViewModel;
 
-    public static DisplacementFragment newInstance() {
-        return new DisplacementFragment();
+    public static VelocityFragment newInstance() {
+        return new VelocityFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.displacement_fragment, container, false);
+        return inflater.inflate(R.layout.velocity_fragment, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(DisplacementViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(VelocityViewModel.class);
         // TODO: Use the ViewModel
     }
 
     @Override
     public String getName() {
-        return "ПУТЬ (S)";
+        return "СКОРОСТЬ (V)";
     }
 }
