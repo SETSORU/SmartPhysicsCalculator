@@ -7,7 +7,15 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.smartphysicscalculator.R;
 import com.example.smartphysicscalculator.ui.adapters.SectionsPagerAdapter;
+import com.example.smartphysicscalculator.ui.fragments.AccDisFirstVelocityFragment;
+import com.example.smartphysicscalculator.ui.fragments.AccDisSecondVelocityFragment;
+import com.example.smartphysicscalculator.ui.fragments.AccDisplacementFragment;
+import com.example.smartphysicscalculator.ui.fragments.DisAccelerationFragment;
+import com.example.smartphysicscalculator.ui.fragments.DisTimeFragment;
 import com.example.smartphysicscalculator.ui.fragments.DisplacementFragment;
+import com.example.smartphysicscalculator.ui.fragments.TimeDisFirstVelocityFragment;
+import com.example.smartphysicscalculator.ui.fragments.TimeDisFragment;
+import com.example.smartphysicscalculator.ui.fragments.TimeDisSecondVelocityFragment;
 import com.example.smartphysicscalculator.ui.fragments.TimeFragment;
 import com.example.smartphysicscalculator.ui.fragments.UniAccDisplacementAccelerationFragment;
 import com.example.smartphysicscalculator.ui.fragments.UniAccDisplacementFragment;
@@ -36,13 +44,19 @@ public class CalculationActivity extends AppCompatActivity {
                 sectionsPagerAdapter.setList(Arrays.asList(UniAccDisplacementFragment.newInstance(), UniAccDisplacementVelocityFragment.newInstance(), UniAccDisplacementAccelerationFragment.newInstance(), UniAccDisplacementTimeFragment.newInstance()));
                 break;
             }
+            case 2: {
+                sectionsPagerAdapter.setList(Arrays.asList(TimeDisFragment.newInstance(), TimeDisFirstVelocityFragment.newInstance(), TimeDisSecondVelocityFragment.newInstance(), DisTimeFragment.newInstance()));
+                break;
+            }
+            case 3: {
+                sectionsPagerAdapter.setList(Arrays.asList(AccDisplacementFragment.newInstance(), AccDisFirstVelocityFragment.newInstance(), AccDisSecondVelocityFragment.newInstance(), DisAccelerationFragment.newInstance()));
+                break;
+            }
 
         }
         ViewPager viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabLayout);
         tabs.setupWithViewPager(viewPager);
-
-
     }
 }
