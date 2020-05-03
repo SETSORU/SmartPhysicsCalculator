@@ -8,34 +8,34 @@
     tools:context=".ui.fragments.UniAccDisplacementFragment">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/firstVelocity_for_uni_acc_dis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Начальная скорость (V)"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/acc_for_uni_acc_dis"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/acc_for_uni_acc_dis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Ускорение (a)"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/editText3"
+        app:layout_constraintBottom_toTopOf="@id/time_for_uni_acc_dis"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/firstVelocity_for_uni_acc_dis" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/time_for_uni_acc_dis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -44,5 +44,5 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editText2" />
+        app:layout_constraintTop_toBottomOf="@id/acc_for_uni_acc_dis" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity implements NameAdapter.OnNam
         names.add(new RVName("Путь при равноускоренном движении, если известно время"));
         names.add(new RVName("Путь при равноускоренном движении, если известно ускорение"));
         names.add(new RVName("Уравнение скорости при равноускоренном движении"));
-        names.add(new RVName("Уровнение движения"));
         names.add(new RVName("Второй закон Ньютона"));
         names.add(new RVName("Сила тяжести тела"));
         names.add(new RVName("Закон Всемирного тяготения"));
