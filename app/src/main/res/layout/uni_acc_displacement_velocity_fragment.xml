@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout7"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.UniAccDisplacementVelocityFragment">
 
-    <TextView
+    <EditText
+        android:id="@+id/uni_acc_dis_for_firstVelocity"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Путь (S)"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@id/uni_acc_acc_for_firstVelocity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/uni_acc_acc_for_firstVelocity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ускорение (a)"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@id/uni_acc_time_for_firstVelocity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uni_acc_dis_for_firstVelocity" />
+
+    <EditText
+        android:id="@+id/uni_acc_time_for_firstVelocity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Время (t)"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uni_acc_acc_for_firstVelocity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

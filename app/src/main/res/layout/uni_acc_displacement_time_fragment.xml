@@ -14,13 +14,13 @@
         android:ems="10"
         android:hint="ПУТЬ (S)"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf=""
+        app:layout_constraintBottom_toTopOf="@id/uni_acc_firstVelocity_for_time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/a"
+        android:id="@+id/uni_acc_firstVelocity_for_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -31,10 +31,14 @@
         app:layout_constraintTop_toBottomOf="@+id/uni_acc_dis_for_time" />
 
     <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
+        android:id="@+id/uni_acc_acc_for_time"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Ускорение (а)"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uni_acc_firstVelocity_for_time" />
 </androidx.constraintlayout.widget.ConstraintLayout>
