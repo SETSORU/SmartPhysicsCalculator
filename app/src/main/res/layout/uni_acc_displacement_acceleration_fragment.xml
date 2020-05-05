@@ -48,4 +48,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/uni_acc_firstVelocity_for_acceleration" />
+
+    <Button
+        android:id="@+id/id4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="535dp"
+        android:background="#2AF1DC"
+        android:backgroundTint="#1BD2D6"
+        android:backgroundTintMode="screen"
+        android:onClick="onUniAccDisAccelerationClick"
+        android:text="ВЫЧИСЛИТЬ"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uni_acc_time_for_acceleration"
+        tools:ignore="OnClick,UnknownId" />
+
+    <TextView
+        android:id="@+id/uni_acceleration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Ускорение (a)"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

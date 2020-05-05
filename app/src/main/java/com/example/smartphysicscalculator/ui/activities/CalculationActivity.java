@@ -92,4 +92,44 @@ public class CalculationActivity extends AppCompatActivity {
         double res = num1 / num2;
         tV.setText(Double.toString(res));
     }
+
+    public void onUniAccDisplacement(View view) {
+        EditText et1 = findViewById(R.id.firstVelocity_for_uni_acc_dis);
+        EditText et2 = findViewById(R.id.acc_for_uni_acc_dis);
+        EditText et3 = findViewById(R.id.time_for_uni_acc_dis);
+        TextView tV = findViewById(R.id.uni_displacement);
+        double num1 = Double.parseDouble(et1.getText().toString());
+        double num2 = Double.parseDouble(et2.getText().toString());
+        double num3 = Double.parseDouble(et3.getText().toString());
+    }
+
+    public void onUniAccDisAccelerationClick(View view) {
+        EditText et1 = findViewById(R.id.uni_acc_dis_for_acceleration);
+        EditText et2 = findViewById(R.id.uni_acc_firstVelocity_for_acceleration);
+        EditText et3 = findViewById(R.id.uni_acc_time_for_acceleration);
+        TextView tV = findViewById(R.id.uni_acceleration);
+        double num1 = Double.parseDouble(et1.getText().toString());
+        double num2 = Double.parseDouble(et2.getText().toString());
+        double num3 = Double.parseDouble(et3.getText().toString());
+    }
+
+    public void onUniAccDisTimeClick(View view) {
+        EditText et1 = findViewById(R.id.uni_acc_dis_for_time);
+        EditText et2 = findViewById(R.id.uni_acc_firstVelocity_for_time);
+        EditText et3 = findViewById(R.id.uni_acc_acc_for_time);
+        TextView tV = findViewById(R.id.uni_time);
+        double num1 = Double.parseDouble(et1.getText().toString());
+        double num2 = Double.parseDouble(et2.getText().toString());
+        double num3 = Double.parseDouble(et3.getText().toString());
+    }
+
+    public void onUniAccDisFirstVelocityClick(View view) {
+        EditText et1 = findViewById(R.id.uni_acc_dis_for_firstVelocity);
+        EditText et2 = findViewById(R.id.uni_acc_acc_for_firstVelocity);
+        EditText et3 = findViewById(R.id.uni_acc_time_for_firstVelocity);
+        TextView tV = findViewById(R.id.uni_firstVelocity);
+        double num1 = Double.parseDouble(et1.getText().toString());
+        double num2 = Double.parseDouble(et2.getText().toString());
+        double num3 = Double.parseDouble(et3.getText().toString());
+    }
 }
