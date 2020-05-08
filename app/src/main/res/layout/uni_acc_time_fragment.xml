@@ -1,56 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frameLayout7"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.UniAccDisplacementAccelerationFragment">
+    tools:context=".ui.fragments.UniAccTimeFragment">
 
     <EditText
-        android:id="@+id/uni_acc_dis_for_acceleration"
+        android:id="@+id/velocity_for_time1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Путь (S)"
+        android:hint="Скорость (V)"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/uni_acc_firstVelocity_for_acceleration"
+        app:layout_constraintBottom_toTopOf="@+id/acc_for_firstVelocity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/uni_acc_firstVelocity_for_acceleration"
+        android:id="@+id/firstVelocity_for_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="130dp"
         android:ems="10"
         android:hint="Начальная скорость (V)"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/uni_acc_time_for_acceleration"
+        app:layout_constraintBottom_toTopOf="@id/acc_for_time"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/uni_acc_dis_for_acceleration"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/velocity_for_time1"
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/uni_acc_time_for_acceleration"
+        android:id="@+id/acc_for_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Время (t)"
+        android:hint="Ускорение (a)"
         android:inputType="textPersonName"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/id7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uni_acc_firstVelocity_for_acceleration" />
+        app:layout_constraintTop_toBottomOf="@id/firstVelocity_for_time" />
 
     <Button
-        android:id="@+id/id4"
+        android:id="@+id/id7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
@@ -60,23 +58,24 @@
         android:background="#2AF1DC"
         android:backgroundTint="#1BD2D6"
         android:backgroundTintMode="screen"
-        android:onClick="onUniAccDisAccelerationClick"
         android:text="ВЫЧИСЛИТЬ"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/uni_acc_time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/uni_acc_time_for_acceleration"
-        tools:ignore="OnClick,UnknownId" />
+        app:layout_constraintTop_toBottomOf="@id/acc_for_time"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/uni_acceleration"
-        android:layout_width="match_parent"
+        android:id="@+id/uni_acc_time"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Ускорение (a)"
+        android:text="Время (t)"
+        android:layout_width="match_parent"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/id4" />
+        app:layout_constraintTop_toBottomOf="@+id/id7"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

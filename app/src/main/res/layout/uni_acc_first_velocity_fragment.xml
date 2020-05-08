@@ -2,48 +2,54 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout6"
+    android:id="@+id/frameLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.UniAccDisplacementTimeFragment">
+    tools:context=".ui.fragments.UniAccFirstVelocityFragment">
+
 
     <EditText
-        android:id="@+id/uni_acc_dis_for_time"
+        android:id="@+id/velocity_for_firstVelocity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="ПУТЬ (S)"
+        android:hint="Скорость (V)"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@id/uni_acc_firstVelocity_for_time"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/acc_for_firstVelocity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/uni_acc_firstVelocity_for_time"
+        android:id="@+id/acc_for_firstVelocity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="НАЧАЛЬНАЯ СКОРОСТЬ (V)"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uni_acc_dis_for_time" />
-
-    <EditText
-        android:id="@+id/uni_acc_acc_for_time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Ускорение (а)"
+        android:hint="Ускорение (a)"
         android:inputType="textPersonName"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/time_for_firstVelocity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/uni_acc_firstVelocity_for_time" />
+        app:layout_constraintTop_toBottomOf="@id/velocity_for_firstVelocity"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/time_for_firstVelocity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Время (t)"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/id5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/acc_for_firstVelocity" />
 
     <Button
-        android:id="@+id/id6"
+        android:id="@+id/id5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
@@ -53,22 +59,23 @@
         android:background="#2AF1DC"
         android:backgroundTint="#1BD2D6"
         android:backgroundTintMode="screen"
-        android:onClick="onUniAccDisTimeClick"
         android:text="ВЫЧИСЛИТЬ"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/uni_acc_firstVelocity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/uni_acc_acc_for_time"
-        tools:ignore="OnClick,UnknownId" />
+        app:layout_constraintTop_toBottomOf="@id/time_for_firstVelocity"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/uni_time"
+        android:id="@+id/uni_acc_firstVelocity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Время (t)"
+        android:text="Начальная скорость (V)"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/id6" />
+        app:layout_constraintTop_toBottomOf="@+id/id5"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
