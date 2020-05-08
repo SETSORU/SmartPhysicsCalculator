@@ -1,82 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/frameLayout7"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout10"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.UniAccTimeFragment">
+    tools:context=".ui.fragments.ForceAccFragment">
 
     <EditText
-        android:id="@+id/velocity_for_time1"
+        android:id="@+id/force_for_acc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Скорость (V)"
+        android:hint="Равнодействующая сил (F)"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/acc_for_firstVelocity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/firstVelocity_for_time"
+        android:id="@+id/mass_for_acc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Начальная скорость (V)"
+        android:hint="Масса (m)"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/acc_for_time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/velocity_for_time1"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/acc_for_time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Ускорение (a)"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/id7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/firstVelocity_for_time" />
+        app:layout_constraintTop_toBottomOf="@id/force_for_acc" />
 
     <Button
-        android:id="@+id/id7"
+        android:id="@+id/id9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="162dp"
-        android:layout_marginBottom="535dp"
         android:background="#2AF1DC"
         android:backgroundTint="#1BD2D6"
         android:backgroundTintMode="screen"
+        android:onClick="onForceAccClick"
         android:text="ВЫЧИСЛИТЬ"
-        android:onClick="onUniAccTimeClick"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/uni_acc_time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/acc_for_time"
-        tools:ignore="MissingConstraints,OnClick" />
+        app:layout_constraintTop_toBottomOf="@id/mass_for_acc"
+        tools:ignore="OnClick" />
 
     <TextView
-        android:id="@+id/uni_acc_time"
+        android:id="@+id/acceleration"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Время (t)"
-        android:layout_width="match_parent"
+        android:text="Ускорение (a)"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id7"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@id/id9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

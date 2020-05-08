@@ -11,6 +11,9 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.smartphysicscalculator.R;
 import com.example.smartphysicscalculator.ui.adapters.SectionsPagerAdapter;
 import com.example.smartphysicscalculator.ui.fragments.DisplacementFragment;
+import com.example.smartphysicscalculator.ui.fragments.ForceAccFragment;
+import com.example.smartphysicscalculator.ui.fragments.ForceFragment;
+import com.example.smartphysicscalculator.ui.fragments.MassFragment;
 import com.example.smartphysicscalculator.ui.fragments.TimeFragment;
 import com.example.smartphysicscalculator.ui.fragments.UniAccFirstVelocityFragment;
 import com.example.smartphysicscalculator.ui.fragments.UniAccFragment;
@@ -38,6 +41,9 @@ public class CalculationActivity extends AppCompatActivity {
             case 1: {
                 sectionsPagerAdapter.setList(Arrays.asList(UniAccVelocityFragment.newInstance(), UniAccFirstVelocityFragment.newInstance(), UniAccFragment.newInstance(), UniAccTimeFragment.newInstance()));
                 break;
+            }
+            case 2: {
+                sectionsPagerAdapter.setList(Arrays.asList(ForceFragment.newInstance(), MassFragment.newInstance(), ForceAccFragment.newInstance()));
             }
 
         }
@@ -77,4 +83,85 @@ public class CalculationActivity extends AppCompatActivity {
         tV.setText(Double.toString(res));
     }
 
+    public void onUniAccFirstVelocityClick(View view) {
+        EditText et1 = findViewById(R.id.velocity_for_firstVelocity);
+        EditText et2 = findViewById(R.id.acc_for_firstVelocity);
+        EditText et3 = findViewById(R.id.time_for_firstVelocity);
+        TextView tV = findViewById(R.id.uni_acc_firstVelocity);
+        double num1 = Double.parseDouble(et1.getText().toString());
+        double num2 = Double.parseDouble(et2.getText().toString());
+        double num3 = Double.parseDouble(et3.getText().toString());
+        double res = num1 - (num2 * num3);
+        tV.setText(Double.toString(res));
+
+    }
+
+    public void onUniAccAccelerationClick(View view) {
+        EditText et1 = findViewById(R.id.firstVelocity_for_acceleration);
+        EditText et2 = findViewById(R.id.velocity_for_acceleration);
+        EditText et3 = findViewById(R.id.time_for_acceleration);
+        TextView tV = findViewById(R.id.uni_acc);
+        double num1 = Double.parseDouble(et1.getText().toString());
+        double num2 = Double.parseDouble(et2.getText().toString());
+        double num3 = Double.parseDouble(et3.getText().toString());
+        double res = (num1 - num2) / num3;
+        tV.setText(Double.toString(res));
+
+    }
+
+    public void onUniAccTimeClick(View view) {
+        EditText et1 = findViewById(R.id.velocity_for_time1);
+        EditText et2 = findViewById(R.id.firstVelocity_for_time);
+        EditText et3 = findViewById(R.id.acc_for_time);
+        TextView tV = findViewById(R.id.uni_acc_time);
+        double num1 = Double.parseDouble(et1.getText().toString());
+        double num2 = Double.parseDouble(et2.getText().toString());
+        double num3 = Double.parseDouble(et3.getText().toString());
+        double res = (num1 - num2) / num3;
+        tV.setText(Double.toString(res));
+
+    }
+
+    public void onUniAccVelocityClick(View view) {
+        EditText et1 = findViewById(R.id.firstVelocity_for_velocity);
+        EditText et2 = findViewById(R.id.acc_for_velocity);
+        EditText et3 = findViewById(R.id.time_for_velocity1);
+        TextView tV = findViewById(R.id.uni_acc_velocity);
+        double num1 = Double.parseDouble(et1.getText().toString());
+        double num2 = Double.parseDouble(et2.getText().toString());
+        double num3 = Double.parseDouble(et3.getText().toString());
+        double res = num1 + (num2 * num3);
+        tV.setText(Double.toString(res));
+
+    }
+
+    public void onForceClick(View view) {
+        EditText et1 = findViewById(R.id.mass_for_force);
+        EditText et2 = findViewById(R.id.acc_for_force);
+        TextView tV = findViewById(R.id.force);
+        double num1 = Double.parseDouble(et1.getText().toString());
+        double num2 = Double.parseDouble(et2.getText().toString());
+        double res = num1 * num2;
+        tV.setText(Double.toString(res));
+    }
+
+    public void onForceAccClick(View view) {
+        EditText et1 = findViewById(R.id.force_for_acc);
+        EditText et2 = findViewById(R.id.mass_for_acc);
+        TextView tV = findViewById(R.id.acceleration);
+        double num1 = Double.parseDouble(et1.getText().toString());
+        double num2 = Double.parseDouble(et2.getText().toString());
+        double res = num1 / num2;
+        tV.setText(Double.toString(res));
+    }
+
+    public void onMassClick(View view) {
+        EditText et1 = findViewById(R.id.force_for_mass);
+        EditText et2 = findViewById(R.id.acc_for_mass);
+        TextView tV = findViewById(R.id.mass);
+        double num1 = Double.parseDouble(et1.getText().toString());
+        double num2 = Double.parseDouble(et2.getText().toString());
+        double res = num1 / num2;
+        tV.setText(Double.toString(res));
+    }
 }

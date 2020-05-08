@@ -57,12 +57,13 @@
         android:backgroundTint="#1BD2D6"
         android:backgroundTintMode="screen"
         android:text="ВЫЧИСЛИТЬ"
+        android:onClick="onUniAccAccelerationClick"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/uni_acc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/time_for_acceleration"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,OnClick" />
 
     <TextView
         android:id="@+id/uni_acc"
