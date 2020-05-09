@@ -10,6 +10,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.smartphysicscalculator.R;
 import com.example.smartphysicscalculator.ui.adapters.SectionsPagerAdapter;
+import com.example.smartphysicscalculator.ui.fragments.ArchimedesForceFragment;
+import com.example.smartphysicscalculator.ui.fragments.ArchimedesGravAccFragment;
+import com.example.smartphysicscalculator.ui.fragments.DensityFragment;
 import com.example.smartphysicscalculator.ui.fragments.DisplacementFragment;
 import com.example.smartphysicscalculator.ui.fragments.ForceAccFragment;
 import com.example.smartphysicscalculator.ui.fragments.ForceFragment;
@@ -20,12 +23,16 @@ import com.example.smartphysicscalculator.ui.fragments.GravitationalForceFragmen
 import com.example.smartphysicscalculator.ui.fragments.GravitationalMassFragment;
 import com.example.smartphysicscalculator.ui.fragments.MassFragment;
 import com.example.smartphysicscalculator.ui.fragments.NormalForceFragment;
+import com.example.smartphysicscalculator.ui.fragments.RestoringForceFragment;
+import com.example.smartphysicscalculator.ui.fragments.SpringConstantFragment;
+import com.example.smartphysicscalculator.ui.fragments.SpringExtentionFragment;
 import com.example.smartphysicscalculator.ui.fragments.TimeFragment;
 import com.example.smartphysicscalculator.ui.fragments.UniAccFirstVelocityFragment;
 import com.example.smartphysicscalculator.ui.fragments.UniAccFragment;
 import com.example.smartphysicscalculator.ui.fragments.UniAccTimeFragment;
 import com.example.smartphysicscalculator.ui.fragments.UniAccVelocityFragment;
 import com.example.smartphysicscalculator.ui.fragments.VelocityFragment;
+import com.example.smartphysicscalculator.ui.fragments.VolumeFragment;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.Arrays;
@@ -58,6 +65,15 @@ public class CalculationActivity extends AppCompatActivity {
             }
             case 4: {
                 sectionsPagerAdapter.setList(Arrays.asList(FrictionalForceFragment.newInstance(), FrictionalRatioFragment.newInstance(), NormalForceFragment.newInstance()));
+                break;
+            }
+            case 5: {
+                sectionsPagerAdapter.setList(Arrays.asList(ArchimedesForceFragment.newInstance(), DensityFragment.newInstance(), ArchimedesGravAccFragment.newInstance(), VolumeFragment.newInstance()));
+                break;
+            }
+            case 6: {
+                sectionsPagerAdapter.setList(Arrays.asList(RestoringForceFragment.newInstance(), SpringConstantFragment.newInstance(), SpringExtentionFragment.newInstance()));
+                break;
             }
 
         }
