@@ -52,6 +52,9 @@ public class CalculationActivity extends AppCompatActivity {
             case 3: {
                 sectionsPagerAdapter.setList(Arrays.asList(GravitationalForceFragment.newInstance(), GravitationalMassFragment.newInstance(), GravitationalAccFragment.newInstance()));
             }
+            case 4: {
+                //sectionsPagerAdapter.setList(Arrays.asList(FrictionalForceFragment.newInstance(), FrictionalRatioFragment.newInstance(), ));
+            }
 
         }
         ViewPager viewPager = findViewById(R.id.viewPager);
@@ -71,35 +74,15 @@ public class CalculationActivity extends AppCompatActivity {
     }
 
     public void onTimeClick(View view) {
-        EditText et1 = findViewById(R.id.displacement_for_time);
-        EditText et2 = findViewById(R.id.velocity_for_time);
-        TextView tV = findViewById(R.id.time);
-        double num1 = Double.parseDouble(et1.getText().toString());
-        double num2 = Double.parseDouble(et2.getText().toString());
-        double res = num1 / num2;
-        tV.setText(Double.toString(res));
+
     }
 
     public void onVelocityClick(View view) {
-        EditText et1 = findViewById(R.id.displacement_for_velocity);
-        EditText et2 = findViewById(R.id.time_for_velocity);
-        TextView tV = findViewById(R.id.velocity);
-        double num1 = Double.parseDouble(et1.getText().toString());
-        double num2 = Double.parseDouble(et2.getText().toString());
-        double res = num1 / num2;
-        tV.setText(Double.toString(res));
+
     }
 
     public void onUniAccFirstVelocityClick(View view) {
-        EditText et1 = findViewById(R.id.velocity_for_firstVelocity);
-        EditText et2 = findViewById(R.id.acc_for_firstVelocity);
-        EditText et3 = findViewById(R.id.time_for_firstVelocity);
-        TextView tV = findViewById(R.id.uni_acc_firstVelocity);
-        double num1 = Double.parseDouble(et1.getText().toString());
-        double num2 = Double.parseDouble(et2.getText().toString());
-        double num3 = Double.parseDouble(et3.getText().toString());
-        double res = num1 - (num2 * num3);
-        tV.setText(Double.toString(res));
+
 
     }
 
@@ -117,28 +100,12 @@ public class CalculationActivity extends AppCompatActivity {
     }
 
     public void onUniAccTimeClick(View view) {
-        EditText et1 = findViewById(R.id.velocity_for_time1);
-        EditText et2 = findViewById(R.id.firstVelocity_for_time);
-        EditText et3 = findViewById(R.id.acc_for_time);
-        TextView tV = findViewById(R.id.uni_acc_time);
-        double num1 = Double.parseDouble(et1.getText().toString());
-        double num2 = Double.parseDouble(et2.getText().toString());
-        double num3 = Double.parseDouble(et3.getText().toString());
-        double res = (num1 - num2) / num3;
-        tV.setText(Double.toString(res));
+
 
     }
 
     public void onUniAccVelocityClick(View view) {
-        EditText et1 = findViewById(R.id.firstVelocity_for_velocity);
-        EditText et2 = findViewById(R.id.acc_for_velocity);
-        EditText et3 = findViewById(R.id.time_for_velocity1);
-        TextView tV = findViewById(R.id.uni_acc_velocity);
-        double num1 = Double.parseDouble(et1.getText().toString());
-        double num2 = Double.parseDouble(et2.getText().toString());
-        double num3 = Double.parseDouble(et3.getText().toString());
-        double res = num1 + (num2 * num3);
-        tV.setText(Double.toString(res));
+
 
     }
 

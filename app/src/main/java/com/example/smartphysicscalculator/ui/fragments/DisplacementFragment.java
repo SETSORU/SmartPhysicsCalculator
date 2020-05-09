@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +19,25 @@ public class DisplacementFragment extends BaseFragment {
 
 
     private DisplacementViewModel mViewModel;
+    private Button btnCalculateDisplacement;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        btnCalculateDisplacement = view.findViewById(R.id.btnCalculateDisplacement);
+        btnCalculateDisplacement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText et1 = v.findViewById(R.id.velocity_for_displacement);
+                EditText et2 = v.findViewById(R.id.time_for_displacement);
+                TextView tV = v.findViewById(R.id.displacement);
+                double num1 = Double.parseDouble(et1.getText().toString());
+                double num2 = Double.parseDouble(et2.getText().toString());
+                double res = num1 * num2;
+                tV.setText(Double.toString(res));
+            }
+        });
+    }
 
     public static DisplacementFragment newInstance() {
         return new DisplacementFragment();

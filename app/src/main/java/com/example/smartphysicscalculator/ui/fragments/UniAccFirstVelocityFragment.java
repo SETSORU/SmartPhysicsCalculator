@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,6 +18,27 @@ import com.example.smartphysicscalculator.ui.base.BaseFragment;
 public class UniAccFirstVelocityFragment extends BaseFragment {
 
     private UniAccFirstVelocityViewModel mViewModel;
+    private Button btnCalculateUniAccFirstVelocity;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        btnCalculateUniAccFirstVelocity = view.findViewById(R.id.btnCalculateUniAccFirstVelocity);
+        btnCalculateUniAccFirstVelocity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText et1 = v.findViewById(R.id.velocity_for_firstVelocity);
+                EditText et2 = v.findViewById(R.id.acc_for_firstVelocity);
+                EditText et3 = v.findViewById(R.id.time_for_firstVelocity);
+                TextView tV = v.findViewById(R.id.uni_acc_firstVelocity);
+                double num1 = Double.parseDouble(et1.getText().toString());
+                double num2 = Double.parseDouble(et2.getText().toString());
+                double num3 = Double.parseDouble(et3.getText().toString());
+                double res = num1 - (num2 * num3);
+                tV.setText(Double.toString(res));
+            }
+        });
+    }
 
     public static UniAccFirstVelocityFragment newInstance() {
         return new UniAccFirstVelocityFragment();
