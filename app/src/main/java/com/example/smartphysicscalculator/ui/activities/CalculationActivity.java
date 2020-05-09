@@ -13,6 +13,9 @@ import com.example.smartphysicscalculator.ui.adapters.SectionsPagerAdapter;
 import com.example.smartphysicscalculator.ui.fragments.DisplacementFragment;
 import com.example.smartphysicscalculator.ui.fragments.ForceAccFragment;
 import com.example.smartphysicscalculator.ui.fragments.ForceFragment;
+import com.example.smartphysicscalculator.ui.fragments.GravitationalAccFragment;
+import com.example.smartphysicscalculator.ui.fragments.GravitationalForceFragment;
+import com.example.smartphysicscalculator.ui.fragments.GravitationalMassFragment;
 import com.example.smartphysicscalculator.ui.fragments.MassFragment;
 import com.example.smartphysicscalculator.ui.fragments.TimeFragment;
 import com.example.smartphysicscalculator.ui.fragments.UniAccFirstVelocityFragment;
@@ -44,6 +47,10 @@ public class CalculationActivity extends AppCompatActivity {
             }
             case 2: {
                 sectionsPagerAdapter.setList(Arrays.asList(ForceFragment.newInstance(), MassFragment.newInstance(), ForceAccFragment.newInstance()));
+                break;
+            }
+            case 3: {
+                sectionsPagerAdapter.setList(Arrays.asList(GravitationalForceFragment.newInstance(), GravitationalMassFragment.newInstance(), GravitationalAccFragment.newInstance()));
             }
 
         }
@@ -159,6 +166,36 @@ public class CalculationActivity extends AppCompatActivity {
         EditText et1 = findViewById(R.id.force_for_mass);
         EditText et2 = findViewById(R.id.acc_for_mass);
         TextView tV = findViewById(R.id.mass);
+        double num1 = Double.parseDouble(et1.getText().toString());
+        double num2 = Double.parseDouble(et2.getText().toString());
+        double res = num1 / num2;
+        tV.setText(Double.toString(res));
+    }
+
+    public void onGravForceClick(View view) {
+        EditText et1 = findViewById(R.id.mass_for_gravitational_force);
+        EditText et2 = findViewById(R.id.grav_acc_for_gravitational_force);
+        TextView tV = findViewById(R.id.gravitational_force);
+        double num1 = Double.parseDouble(et1.getText().toString());
+        double num2 = Double.parseDouble(et2.getText().toString());
+        double res = num1 * num2;
+        tV.setText(Double.toString(res));
+    }
+
+    public void onGravMassClick(View view) {
+        EditText et1 = findViewById(R.id.gravitational_force_for_mass);
+        EditText et2 = findViewById(R.id.gravitational_acc_for_mass);
+        TextView tV = findViewById(R.id.gravitational_mass);
+        double num1 = Double.parseDouble(et1.getText().toString());
+        double num2 = Double.parseDouble(et2.getText().toString());
+        double res = num1 / num2;
+        tV.setText(Double.toString(res));
+    }
+
+    public void onGravAccClick(View view) {
+        EditText et1 = findViewById(R.id.grav_force_for_grav_acc);
+        EditText et2 = findViewById(R.id.mass_for_grav_acc);
+        TextView tV = findViewById(R.id.gravitational_acc);
         double num1 = Double.parseDouble(et1.getText().toString());
         double num2 = Double.parseDouble(et2.getText().toString());
         double res = num1 / num2;
