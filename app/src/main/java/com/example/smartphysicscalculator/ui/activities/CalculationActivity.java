@@ -13,10 +13,13 @@ import com.example.smartphysicscalculator.ui.adapters.SectionsPagerAdapter;
 import com.example.smartphysicscalculator.ui.fragments.DisplacementFragment;
 import com.example.smartphysicscalculator.ui.fragments.ForceAccFragment;
 import com.example.smartphysicscalculator.ui.fragments.ForceFragment;
+import com.example.smartphysicscalculator.ui.fragments.FrictionalForceFragment;
+import com.example.smartphysicscalculator.ui.fragments.FrictionalRatioFragment;
 import com.example.smartphysicscalculator.ui.fragments.GravitationalAccFragment;
 import com.example.smartphysicscalculator.ui.fragments.GravitationalForceFragment;
 import com.example.smartphysicscalculator.ui.fragments.GravitationalMassFragment;
 import com.example.smartphysicscalculator.ui.fragments.MassFragment;
+import com.example.smartphysicscalculator.ui.fragments.NormalForceFragment;
 import com.example.smartphysicscalculator.ui.fragments.TimeFragment;
 import com.example.smartphysicscalculator.ui.fragments.UniAccFirstVelocityFragment;
 import com.example.smartphysicscalculator.ui.fragments.UniAccFragment;
@@ -51,9 +54,10 @@ public class CalculationActivity extends AppCompatActivity {
             }
             case 3: {
                 sectionsPagerAdapter.setList(Arrays.asList(GravitationalForceFragment.newInstance(), GravitationalMassFragment.newInstance(), GravitationalAccFragment.newInstance()));
+                break;
             }
             case 4: {
-                //sectionsPagerAdapter.setList(Arrays.asList(FrictionalForceFragment.newInstance(), FrictionalRatioFragment.newInstance(), ));
+                sectionsPagerAdapter.setList(Arrays.asList(FrictionalForceFragment.newInstance(), FrictionalRatioFragment.newInstance(), NormalForceFragment.newInstance()));
             }
 
         }
@@ -66,9 +70,7 @@ public class CalculationActivity extends AppCompatActivity {
 
     public static void hideKeyboard(Activity activity) {
         InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        //Find the currently focused view, so we can grab the correct window token from it.
         View view = activity.getCurrentFocus();
-        //If no view currently has focus, create a new one, just so we can grab a window token from it
         if (view == null) {
             view = new View(activity);
         }

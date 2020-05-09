@@ -63,6 +63,6 @@ public class DisplacementFragment extends BaseFragment {
 
     @Override
     public String getName() {
-        return "ПУТЬ (S)";
+        return "Путь (S)";
     }
 }

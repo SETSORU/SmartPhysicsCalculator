@@ -60,6 +60,6 @@ public class ForceAccFragment extends BaseFragment {
 
     @Override
     public String getName() {
-        return "УСКОРЕНИЕ(a)";
+        return "Ускорение (a)";
     }
 }

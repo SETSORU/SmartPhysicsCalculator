@@ -2,17 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout8"
+    android:id="@+id/frameLayout16"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.ForceFragment">
+    tools:context=".ui.fragments.NormalForceFragment">
 
     <EditText
-        android:id="@+id/mass_for_force"
+        android:id="@+id/frictionalForce_for_normalForce"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Масса (m)"
+        android:hint="Сила трения (F)"
         android:inputType="textPersonName"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,19 +20,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/acc_for_force"
+        android:id="@+id/frictionalRatio_for_normalForce"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Ускорение (a)"
+        android:hint="Коэффициент трения (μ)"
         android:inputType="textPersonName"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mass_for_force" />
+        app:layout_constraintTop_toBottomOf="@id/frictionalForce_for_normalForce" />
 
     <Button
-        android:id="@+id/btnCalculateForce"
+        android:id="@+id/btnCalculateNormalForce"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
@@ -45,18 +45,17 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/acc_for_force"
-        tools:ignore="OnClick" />
+        app:layout_constraintTop_toBottomOf="@id/frictionalRatio_for_normalForce" />
 
     <TextView
-        android:id="@+id/force"
+        android:id="@+id/normalForce"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Равнодействующая сил (F)"
+        android:text="Нормальная сила (N)"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnCalculateForce" />
+        app:layout_constraintTop_toBottomOf="@id/btnCalculateNormalForce" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
