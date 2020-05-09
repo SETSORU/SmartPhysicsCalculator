@@ -13,27 +13,32 @@ import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.smartphysicscalculator.R;
+import com.example.smartphysicscalculator.ui.activities.CalculationActivity;
 import com.example.smartphysicscalculator.ui.base.BaseFragment;
 
 public class VelocityFragment extends BaseFragment {
 
     private VelocityViewModel mViewModel;
     private Button btnCalculateVelocity;
+    private EditText et1, et2;
+    private TextView tV;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        btnCalculateVelocity = view.findViewById(R.id.btnCalculateTime);
+        et1 = view.findViewById(R.id.displacement_for_velocity);
+        et2 = view.findViewById(R.id.time_for_velocity);
+        tV = view.findViewById(R.id.velocity);
+        btnCalculateVelocity = view.findViewById(R.id.btnCalculateVelocity);
         btnCalculateVelocity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText et1 = v.findViewById(R.id.displacement_for_velocity);
-                EditText et2 = v.findViewById(R.id.time_for_velocity);
-                TextView tV = v.findViewById(R.id.velocity);
+
                 double num1 = Double.parseDouble(et1.getText().toString());
                 double num2 = Double.parseDouble(et2.getText().toString());
                 double res = num1 / num2;
                 tV.setText(Double.toString(res));
+                CalculationActivity.hideKeyboard(getActivity());
             }
         });
     }

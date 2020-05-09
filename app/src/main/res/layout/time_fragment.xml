@@ -30,7 +30,7 @@
         android:hint="Скорость (V)"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/time"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalculateTime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

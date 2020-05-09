@@ -13,29 +13,33 @@ import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.smartphysicscalculator.R;
+import com.example.smartphysicscalculator.ui.activities.CalculationActivity;
 import com.example.smartphysicscalculator.ui.base.BaseFragment;
 
 public class UniAccFragment extends BaseFragment {
 
     private UniAccViewModel mViewModel;
     private Button btnCalculateUniAcc;
+    TextView tV;
+    private EditText et1, et2, et3;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        et1 = view.findViewById(R.id.firstVelocity_for_acceleration);
+        et2 = view.findViewById(R.id.velocity_for_acceleration);
+        et3 = view.findViewById(R.id.time_for_acceleration);
+        tV = view.findViewById(R.id.uni_acc);
         btnCalculateUniAcc = view.findViewById(R.id.btnCalculateUniAcc);
         btnCalculateUniAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText et1 = v.findViewById(R.id.firstVelocity_for_acceleration);
-                EditText et2 = v.findViewById(R.id.velocity_for_acceleration);
-                EditText et3 = v.findViewById(R.id.time_for_acceleration);
-                TextView tV = v.findViewById(R.id.uni_acc);
                 double num1 = Double.parseDouble(et1.getText().toString());
                 double num2 = Double.parseDouble(et2.getText().toString());
                 double num3 = Double.parseDouble(et3.getText().toString());
                 double res = (num1 - num2) / num3;
-                tV.setText(Double.toString(res));
+                tV.setText(String.valueOf(res));
+                CalculationActivity.hideKeyboard(getActivity());
             }
         });
     }

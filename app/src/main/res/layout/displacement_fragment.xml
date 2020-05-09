@@ -31,7 +31,6 @@
         android:inputType="textPersonName"
         android:hint="Время (t)"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/displacement"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

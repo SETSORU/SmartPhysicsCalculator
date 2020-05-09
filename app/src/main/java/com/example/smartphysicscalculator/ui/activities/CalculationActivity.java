@@ -1,7 +1,9 @@
 package com.example.smartphysicscalculator.ui.activities;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -63,70 +65,16 @@ public class CalculationActivity extends AppCompatActivity {
         tabs.setupWithViewPager(viewPager);
     }
 
-    public void onDisplacementClick(View view) {
-        EditText et1 = findViewById(R.id.velocity_for_displacement);
-        EditText et2 = findViewById(R.id.time_for_displacement);
-        TextView tV = findViewById(R.id.displacement);
-        double num1 = Double.parseDouble(et1.getText().toString());
-        double num2 = Double.parseDouble(et2.getText().toString());
-        double res = num1 * num2;
-        tV.setText(Double.toString(res));
-    }
 
-    public void onTimeClick(View view) {
-
-    }
-
-    public void onVelocityClick(View view) {
-
-    }
-
-    public void onUniAccFirstVelocityClick(View view) {
-
-
-    }
-
-    public void onUniAccAccelerationClick(View view) {
-        EditText et1 = findViewById(R.id.firstVelocity_for_acceleration);
-        EditText et2 = findViewById(R.id.velocity_for_acceleration);
-        EditText et3 = findViewById(R.id.time_for_acceleration);
-        TextView tV = findViewById(R.id.uni_acc);
-        double num1 = Double.parseDouble(et1.getText().toString());
-        double num2 = Double.parseDouble(et2.getText().toString());
-        double num3 = Double.parseDouble(et3.getText().toString());
-        double res = (num1 - num2) / num3;
-        tV.setText(Double.toString(res));
-
-    }
-
-    public void onUniAccTimeClick(View view) {
-
-
-    }
-
-    public void onUniAccVelocityClick(View view) {
-
-
-    }
-
-    public void onForceClick(View view) {
-        EditText et1 = findViewById(R.id.mass_for_force);
-        EditText et2 = findViewById(R.id.acc_for_force);
-        TextView tV = findViewById(R.id.force);
-        double num1 = Double.parseDouble(et1.getText().toString());
-        double num2 = Double.parseDouble(et2.getText().toString());
-        double res = num1 * num2;
-        tV.setText(Double.toString(res));
-    }
-
-    public void onForceAccClick(View view) {
-        EditText et1 = findViewById(R.id.force_for_acc);
-        EditText et2 = findViewById(R.id.mass_for_acc);
-        TextView tV = findViewById(R.id.acceleration);
-        double num1 = Double.parseDouble(et1.getText().toString());
-        double num2 = Double.parseDouble(et2.getText().toString());
-        double res = num1 / num2;
-        tV.setText(Double.toString(res));
+    public static void hideKeyboard(Activity activity) {
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = activity.getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(activity);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
     public void onMassClick(View view) {
@@ -167,5 +115,10 @@ public class CalculationActivity extends AppCompatActivity {
         double num2 = Double.parseDouble(et2.getText().toString());
         double res = num1 / num2;
         tV.setText(Double.toString(res));
+    }
+
+    public void onForceClick(View view) {
+
+
     }
 }
