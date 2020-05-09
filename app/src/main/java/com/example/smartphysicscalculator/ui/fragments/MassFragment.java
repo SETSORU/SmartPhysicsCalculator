@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.smartphysicscalculator.R;
+import com.example.smartphysicscalculator.ui.activities.CalculationActivity;
 import com.example.smartphysicscalculator.ui.base.BaseFragment;
 
 public class MassFragment extends BaseFragment {
@@ -21,6 +22,25 @@ public class MassFragment extends BaseFragment {
     private Button btnCalculateMass;
     private EditText et1, et2;
     private TextView tV;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        et1 = view.findViewById(R.id.force_for_mass);
+        et2 = view.findViewById(R.id.acc_for_mass);
+        tV = view.findViewById(R.id.mass);
+        btnCalculateMass = view.findViewById(R.id.btnCalculateMass);
+        btnCalculateMass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double num1 = Double.parseDouble(et1.getText().toString());
+                double num2 = Double.parseDouble(et2.getText().toString());
+                double res = num1 / num2;
+                tV.setText(String.valueOf(res));
+                CalculationActivity.hideKeyboard(getActivity());
+            }
+        });
+    }
 
     public static MassFragment newInstance() {
         return new MassFragment();

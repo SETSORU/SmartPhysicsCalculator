@@ -78,13 +78,8 @@ public class CalculationActivity extends AppCompatActivity {
     }
 
     public void onMassClick(View view) {
-        EditText et1 = findViewById(R.id.force_for_mass);
-        EditText et2 = findViewById(R.id.acc_for_mass);
-        TextView tV = findViewById(R.id.mass);
-        double num1 = Double.parseDouble(et1.getText().toString());
-        double num2 = Double.parseDouble(et2.getText().toString());
-        double res = num1 / num2;
-        tV.setText(Double.toString(res));
+
+
     }
 
     public void onGravForceClick(View view) {
@@ -101,10 +96,7 @@ public class CalculationActivity extends AppCompatActivity {
         EditText et1 = findViewById(R.id.gravitational_force_for_mass);
         EditText et2 = findViewById(R.id.gravitational_acc_for_mass);
         TextView tV = findViewById(R.id.gravitational_mass);
-        double num1 = Double.parseDouble(et1.getText().toString());
-        double num2 = Double.parseDouble(et2.getText().toString());
-        double res = num1 / num2;
-        tV.setText(Double.toString(res));
+
     }
 
     public void onGravAccClick(View view) {
