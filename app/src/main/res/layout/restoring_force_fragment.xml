@@ -1,13 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout21"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.RestoringForceFragment">
 
-    <TextView
+    <EditText
+        android:id="@+id/springConstant_for_restoringForce"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Коеффициент упругости (k)"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/springExtention_for_restoringForce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Удлинение тела (x)"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/springConstant_for_restoringForce" />
+
+    <Button
+        android:id="@+id/btnCalculateRestoringForce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="162dp"
+        android:background="#2AF1DC"
+        android:backgroundTint="#1BD2D6"
+        android:backgroundTintMode="screen"
+        android:text="ВЫЧИСЛИТЬ"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/springExtention_for_restoringForce"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/restoringForce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Сила упругости (F)"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCalculateRestoringForce" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

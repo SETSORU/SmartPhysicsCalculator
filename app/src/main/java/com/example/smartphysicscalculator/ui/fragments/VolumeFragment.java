@@ -4,17 +4,45 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.smartphysicscalculator.R;
+import com.example.smartphysicscalculator.ui.activities.CalculationActivity;
 import com.example.smartphysicscalculator.ui.base.BaseFragment;
 
 public class VolumeFragment extends BaseFragment {
 
     private VolumeViewModel mViewModel;
+    private Button btnCalculateVolume;
+    private EditText et1, et2, et3;
+    private TextView tV;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        et1 = view.findViewById(R.id.archimedesForce_for_volume);
+        et2 = view.findViewById(R.id.archimedesGravAcc_for_volume);
+        et3 = view.findViewById(R.id.density_for_volume);
+        tV = view.findViewById(R.id.volume);
+        btnCalculateVolume = view.findViewById(R.id.btnCalculateVolume);
+        btnCalculateVolume.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double num1 = Double.parseDouble(et1.getText().toString());
+                double num2 = Double.parseDouble(et2.getText().toString());
+                double num3 = Double.parseDouble(et3.getText().toString());
+                double res = num1 / (num2 * num3);
+                tV.setText(String.valueOf(res));
+                CalculationActivity.hideKeyboard(getActivity());
+            }
+        });
+    }
 
     public static VolumeFragment newInstance() {
         return new VolumeFragment();
@@ -30,7 +58,6 @@ public class VolumeFragment extends BaseFragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(VolumeViewModel.class);
-        // TODO: Use the ViewModel
     }
 
     @Override

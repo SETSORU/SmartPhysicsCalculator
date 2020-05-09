@@ -63,7 +63,7 @@
         tools:ignore="MissingConstraints,OnClick" />
 
     <TextView
-        android:id="@+id/density"
+        android:id="@+id/volume"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"

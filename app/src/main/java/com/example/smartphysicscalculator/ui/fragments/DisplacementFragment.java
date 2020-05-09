@@ -21,9 +21,8 @@ public class DisplacementFragment extends BaseFragment {
 
     private DisplacementViewModel mViewModel;
     private Button btnCalculateDisplacement;
-    EditText et1;
-    EditText et2;
-    TextView tV;
+    private EditText et1, et2;
+    private TextView tV;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {

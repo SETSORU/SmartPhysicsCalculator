@@ -4,17 +4,43 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.smartphysicscalculator.R;
+import com.example.smartphysicscalculator.ui.activities.CalculationActivity;
 import com.example.smartphysicscalculator.ui.base.BaseFragment;
 
 public class SpringConstantFragment extends BaseFragment {
 
     private SpringConstantViewModel mViewModel;
+    private EditText et1, et2;
+    private TextView tV;
+    private Button btnCalculateSpringConstant;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        et1 = view.findViewById(R.id.restoringForce_for_springConstant);
+        et2 = view.findViewById(R.id.springExtention_for_springConstant);
+        tV = view.findViewById(R.id.springConstant);
+        btnCalculateSpringConstant = view.findViewById(R.id.btnCalculateSpringConstant);
+        btnCalculateSpringConstant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double num1 = Double.parseDouble(et1.getText().toString());
+                double num2 = Double.parseDouble(et2.getText().toString());
+                double res = num1 / num2;
+                tV.setText(String.valueOf(res));
+                CalculationActivity.hideKeyboard(getActivity());
+            }
+        });
+    }
 
     public static SpringConstantFragment newInstance() {
         return new SpringConstantFragment();
@@ -35,6 +61,6 @@ public class SpringConstantFragment extends BaseFragment {
 
     @Override
     public String getName() {
-        return "Жесткость пружины (k)";
+        return "Коеффициент упругости (k)";
     }
 }
