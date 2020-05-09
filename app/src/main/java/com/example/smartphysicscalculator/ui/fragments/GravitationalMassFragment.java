@@ -19,13 +19,16 @@ import com.example.smartphysicscalculator.ui.base.BaseFragment;
 public class GravitationalMassFragment extends BaseFragment {
 
     private GravitatioinalMassViewModel mViewModel;
-    EditText et1, et2, et3;
+    EditText et1, et2;
     TextView tV;
     Button btnCalculateGravMass;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        et1 = view.findViewById(R.id.gravitational_force_for_mass);
+        et2 = view.findViewById(R.id.gravitational_acc_for_mass);
+        tV = view.findViewById(R.id.gravitational_mass);
         btnCalculateGravMass = view.findViewById(R.id.btnCalculateGravMass);
         btnCalculateGravMass.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +56,6 @@ public class GravitationalMassFragment extends BaseFragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(GravitatioinalMassViewModel.class);
-        // TODO: Use the ViewModel
     }
 
     @Override

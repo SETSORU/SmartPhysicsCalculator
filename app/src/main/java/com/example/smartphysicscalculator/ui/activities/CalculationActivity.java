@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -75,42 +73,5 @@ public class CalculationActivity extends AppCompatActivity {
             view = new View(activity);
         }
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-    }
-
-    public void onMassClick(View view) {
-
-
-    }
-
-    public void onGravForceClick(View view) {
-        EditText et1 = findViewById(R.id.mass_for_gravitational_force);
-        EditText et2 = findViewById(R.id.grav_acc_for_gravitational_force);
-        TextView tV = findViewById(R.id.gravitational_force);
-        double num1 = Double.parseDouble(et1.getText().toString());
-        double num2 = Double.parseDouble(et2.getText().toString());
-        double res = num1 * num2;
-        tV.setText(Double.toString(res));
-    }
-
-    public void onGravMassClick(View view) {
-        EditText et1 = findViewById(R.id.gravitational_force_for_mass);
-        EditText et2 = findViewById(R.id.gravitational_acc_for_mass);
-        TextView tV = findViewById(R.id.gravitational_mass);
-
-    }
-
-    public void onGravAccClick(View view) {
-        EditText et1 = findViewById(R.id.grav_force_for_grav_acc);
-        EditText et2 = findViewById(R.id.mass_for_grav_acc);
-        TextView tV = findViewById(R.id.gravitational_acc);
-        double num1 = Double.parseDouble(et1.getText().toString());
-        double num2 = Double.parseDouble(et2.getText().toString());
-        double res = num1 / num2;
-        tV.setText(Double.toString(res));
-    }
-
-    public void onForceClick(View view) {
-
-
     }
 }

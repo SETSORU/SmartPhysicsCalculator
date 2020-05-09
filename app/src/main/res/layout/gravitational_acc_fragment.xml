@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@id/grav_force_for_grav_acc" />
 
     <Button
-        android:id="@+id/id11"
+        android:id="@+id/btnCalculateGravAcc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
@@ -58,6 +58,6 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/id11" />
+        app:layout_constraintTop_toBottomOf="@id/btnCalculateGravAcc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
