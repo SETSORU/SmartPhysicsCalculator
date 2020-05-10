@@ -36,9 +36,10 @@ public class DisplacementFragment extends BaseFragment {
             public void onClick(View v) {
                 double num1 = Double.parseDouble(et1.getText().toString());
                 double num2 = Double.parseDouble(et2.getText().toString());
-                double res = num1 * num2;
+                double res = num1 / num2;
                 tV.setText(String.valueOf(res));
                 CalculationActivity.hideKeyboard(getActivity());
+
             }
         });
     }
@@ -57,7 +58,6 @@ public class DisplacementFragment extends BaseFragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(DisplacementViewModel.class);
-        // TODO: Use the ViewModel
     }
 
     @Override

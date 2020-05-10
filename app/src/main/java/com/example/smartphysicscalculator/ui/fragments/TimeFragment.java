@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,12 +17,16 @@ import com.example.smartphysicscalculator.R;
 import com.example.smartphysicscalculator.ui.activities.CalculationActivity;
 import com.example.smartphysicscalculator.ui.base.BaseFragment;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class TimeFragment extends BaseFragment {
 
     private TimeViewModel mViewModel;
     private Button btnCalculateTime;
     private EditText et1, et2;
     private TextView tV;
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -58,6 +63,7 @@ public class TimeFragment extends BaseFragment {
         mViewModel = ViewModelProviders.of(this).get(TimeViewModel.class);
         // TODO: Use the ViewModel
     }
+
 
     @Override
     public String getName() {
