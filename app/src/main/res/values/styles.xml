@@ -22,11 +22,4 @@
         <item name="android:textAllCaps">false</item>
     </style>
 
-    <style name="BaseTheme" parent="DefaultAppBarLayout">
-        <item name="colorPrimary">#FF0000</item>
-    </style>
-
-    <style name="DefaultAppBarLayout" parent="Widget.Design.AppBarLayout">
-        <item name="android:background">@android:color/transparent</item>
-    </style>
 </resources>

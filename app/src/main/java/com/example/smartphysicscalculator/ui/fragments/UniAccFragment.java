@@ -26,8 +26,8 @@ public class UniAccFragment extends BaseFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        et1 = view.findViewById(R.id.firstVelocity_for_acceleration);
-        et2 = view.findViewById(R.id.velocity_for_acceleration);
+        et1 = view.findViewById(R.id.velocity_for_acceleration);
+        et2 = view.findViewById(R.id.firstVelocity_for_acceleration);
         et3 = view.findViewById(R.id.time_for_acceleration);
         tV = view.findViewById(R.id.uni_acc);
         btnCalculateUniAcc = view.findViewById(R.id.btnCalculateUniAcc);
@@ -37,7 +37,7 @@ public class UniAccFragment extends BaseFragment {
                 double num1 = Double.parseDouble(et1.getText().toString());
                 double num2 = Double.parseDouble(et2.getText().toString());
                 double num3 = Double.parseDouble(et3.getText().toString());
-                double res = (num1 - num2) / num3;
+                double res = num1 - num2 / num3;
                 tV.setText(String.valueOf(res));
                 CalculationActivity.hideKeyboard(getActivity());
             }

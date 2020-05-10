@@ -58,7 +58,6 @@ public class UniAccFirstVelocityFragment extends BaseFragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(UniAccFirstVelocityViewModel.class);
-        // TODO: Use the ViewModel
     }
 
     @Override
