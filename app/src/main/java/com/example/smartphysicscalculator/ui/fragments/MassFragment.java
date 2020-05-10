@@ -61,6 +61,6 @@ public class MassFragment extends BaseFragment {
 
     @Override
     public String getName() {
-        return "МАССА (m)";
+        return "Масса (m)";
     }
 }

@@ -62,6 +62,6 @@ public class GravitationalAccFragment extends BaseFragment {
 
     @Override
     public String getName() {
-        return "УСКОРЕНИЕ (a)";
+        return "Укорение свободного падения (g)";
     }
 }

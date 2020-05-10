@@ -67,6 +67,6 @@ public class TimeFragment extends BaseFragment {
 
     @Override
     public String getName() {
-        return "ВРЕМЯ (t)";
+        return "Время (t)";
     }
 }

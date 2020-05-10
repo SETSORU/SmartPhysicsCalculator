@@ -63,6 +63,6 @@ public class UniAccTimeFragment extends BaseFragment {
 
     @Override
     public String getName() {
-        return "ВРЕМЯ (t)";
+        return "Время (t)";
     }
 }

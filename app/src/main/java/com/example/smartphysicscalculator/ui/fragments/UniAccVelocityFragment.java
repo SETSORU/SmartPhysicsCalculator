@@ -64,6 +64,6 @@ public class UniAccVelocityFragment extends BaseFragment {
 
     @Override
     public String getName() {
-        return "СКОРОСТЬ (V)";
+        return "Скорость (V)";
     }
 }

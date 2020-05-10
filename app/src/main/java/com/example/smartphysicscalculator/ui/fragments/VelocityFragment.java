@@ -62,6 +62,6 @@ public class VelocityFragment extends BaseFragment {
 
     @Override
     public String getName() {
-        return "СКОРОСТЬ (V)";
+        return "Скорость (V)";
     }
 }

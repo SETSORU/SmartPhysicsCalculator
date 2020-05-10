@@ -60,6 +60,6 @@ public class GravitationalMassFragment extends BaseFragment {
 
     @Override
     public String getName() {
-        return "МАССА (m)";
+        return "Масса (m)";
     }
 }

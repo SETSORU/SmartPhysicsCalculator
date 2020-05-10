@@ -63,6 +63,6 @@ public class UniAccFragment extends BaseFragment {
 
     @Override
     public String getName() {
-        return "УСКОРЕНИЕ (a)";
+        return "Ускорение (a)";
     }
 }

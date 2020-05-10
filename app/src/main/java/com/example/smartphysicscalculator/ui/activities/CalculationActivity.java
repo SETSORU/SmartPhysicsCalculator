@@ -81,8 +81,20 @@ public class CalculationActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabLayout);
         tabs.setupWithViewPager(viewPager);
+
     }
 
+    public static boolean checkNumeric(String s) {
+        boolean numeric = true;
+
+        numeric = s.matches("-?\\d+(\\.\\d+)?");
+
+        if(numeric)
+            System.out.println(s + " is a number");
+        else
+            System.out.println(s + " is not a number");
+        return numeric;
+    }
 
     public static void hideKeyboard(Activity activity) {
         InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);

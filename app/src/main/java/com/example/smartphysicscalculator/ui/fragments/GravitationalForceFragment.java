@@ -61,6 +61,6 @@ public class GravitationalForceFragment extends BaseFragment {
 
     @Override
     public String getName() {
-        return "СИЛА ТЯЖЕСТИ (F)";
+        return "Смла тяжести (F)";
     }
 }
