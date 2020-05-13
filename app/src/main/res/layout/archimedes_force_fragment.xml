@@ -12,11 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Плотность (ρ) - кг/м3"
+        android:hint="@string/density"
         android:inputType="numberDecimal"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -24,12 +25,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Ускорение свободного падения (g) - м/с2"
+        android:hint="@string/gravAcc"
         android:inputType="numberDecimal"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/density_for_archimedesForce"
+        android:importantForAutofill="no"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -37,11 +39,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Объем (V) - м3"
+        android:hint="@string/volume"
         android:inputType="numberDecimal"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no"
         app:layout_constraintTop_toBottomOf="@id/grav_acc_for_archimedesForce" />
 
     <Button
@@ -53,7 +56,7 @@
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="535dp"
         android:background="#58aaed"
-        android:text="ВЫЧИСЛИТЬ"
+        android:text="@string/calculate"
         android:textSize="20sp"
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Сила Архимеда (F) - Н"
+        android:text="@string/archimedesForce"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

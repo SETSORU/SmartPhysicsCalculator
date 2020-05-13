@@ -3,4 +3,23 @@
     <string name="title_activity_displacement">DisplacementActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="frictionalForce">Сила трения (F) - Н</string>
+    <string name="normalForce">Нормальная сила (N) - Н</string>
+    <string name="calculate">ВЫЧИСЛИТЬ</string>
+    <string name="frictionalRatio">Коэффициент трения (μ)</string>
+    <string name="density">Плотность (ρ) - кг/м3</string>
+    <string name="volume">Объем (V) - м3</string>
+    <string name="archimedesForce">Сила Архимеда (F) - Н</string>
+    <string name="gravAcc">Ускорение свободного падения (g) - м/с2</string>
+    <string name="velocity">Скорость (V) - м/с</string>
+    <string name="time">Время (t) - с</string>
+    <string name="displacement">Путь (S) - м</string>
+    <string name="force">Равнодействующая сил (F) - Н</string>
+    <string name="mass">Масса (m) - кг</string>
+    <string name="acc">Ускорение (a) - м/с2</string>
+    <string name="gravForce">Сила тяжести (F) - Н</string>
+    <string name="springConstant">Коеффициент упругости (k) - Н/м</string>
+    <string name="springExtention">Удлинение тела (x) - м</string>
+    <string name="restoringForce">Сила упругости (F) - Н</string>
+    <string name="firstVelocity">Начальная скорость (V) - м/с</string>
 </resources>

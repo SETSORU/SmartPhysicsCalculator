@@ -17,9 +17,6 @@ import com.example.smartphysicscalculator.R;
 import com.example.smartphysicscalculator.ui.activities.CalculationActivity;
 import com.example.smartphysicscalculator.ui.base.BaseFragment;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class TimeFragment extends BaseFragment {
 
     private TimeViewModel mViewModel;
@@ -38,11 +35,15 @@ public class TimeFragment extends BaseFragment {
         btnCalculateTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double num1 = Double.parseDouble(et1.getText().toString());
-                double num2 = Double.parseDouble(et2.getText().toString());
-                double res = num1 / num2;
-                tV.setText(Double.toString(res));
-                CalculationActivity.hideKeyboard(getActivity());
+                if (CalculationActivity.checkNumeric(et1.getText().toString()) && CalculationActivity.checkNumeric(et2.getText().toString())) {
+                    double num1 = Double.parseDouble(et1.getText().toString());
+                    double num2 = Double.parseDouble(et2.getText().toString());
+                    double res = num1 / num2;
+                    tV.setText(Double.toString(res));
+                    CalculationActivity.hideKeyboard(getActivity());
+                } else {
+                    Toast.makeText(getContext(), "ERROR", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

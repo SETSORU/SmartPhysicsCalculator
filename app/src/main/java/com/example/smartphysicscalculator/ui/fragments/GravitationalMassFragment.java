@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,9 +20,9 @@ import com.example.smartphysicscalculator.ui.base.BaseFragment;
 public class GravitationalMassFragment extends BaseFragment {
 
     private GravitatioinalMassViewModel mViewModel;
-    EditText et1, et2;
-    TextView tV;
-    Button btnCalculateGravMass;
+    private EditText et1, et2;
+    private TextView tV;
+    private Button btnCalculateGravMass;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -33,11 +34,15 @@ public class GravitationalMassFragment extends BaseFragment {
         btnCalculateGravMass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double num1 = Double.parseDouble(et1.getText().toString());
-                double num2 = Double.parseDouble(et2.getText().toString());
-                double res = num1 / num2;
-                tV.setText(String.valueOf(res));
-                CalculationActivity.hideKeyboard(getActivity());
+                if (CalculationActivity.checkNumeric(et1.getText().toString()) && CalculationActivity.checkNumeric(et2.getText().toString())) {
+                    double num1 = Double.parseDouble(et1.getText().toString());
+                    double num2 = Double.parseDouble(et2.getText().toString());
+                    double res = num1 / num2;
+                    tV.setText(String.valueOf(res));
+                    CalculationActivity.hideKeyboard(getActivity());
+                } else {
+                    Toast.makeText(getContext(), "ERROR", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

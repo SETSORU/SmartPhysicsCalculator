@@ -12,9 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Коеффициент упругости (k) - Н/м"
+        android:hint="@string/springConstant"
         android:inputType="numberDecimal"
         android:textSize="20sp"
+        android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,9 +25,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Удлинение тела (x) - м"
+        android:hint="@string/springExtention"
         android:inputType="numberDecimal"
         android:textSize="20sp"
+        android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/springConstant_for_restoringForce" />
@@ -39,20 +41,19 @@
         android:layout_marginTop="52dp"
         android:layout_marginEnd="162dp"
         android:background="#58aaed"
-        android:text="ВЫЧИСЛИТЬ"
+        android:text="@string/calculate"
         android:textSize="20sp"
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/springExtention_for_restoringForce"
-        tools:ignore="OnClick" />
+        app:layout_constraintTop_toBottomOf="@id/springExtention_for_restoringForce" />
 
     <TextView
         android:id="@+id/restoringForce"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Сила упругости (F) - Н"
+        android:text="@string/restoringForce"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
