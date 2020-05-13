@@ -41,7 +41,7 @@ public class UniAccVelocityFragment extends BaseFragment {
                     double num2 = Double.parseDouble(et2.getText().toString());
                     double num3 = Double.parseDouble(et3.getText().toString());
                     double res = num1 + (num2 * num3);
-                    tV.setText(Double.toString(res));
+                    tV.setText(String.valueOf(res));
                     CalculationActivity.hideKeyboard(getActivity());
                 } else {
                     Toast.makeText(getContext(), "ERROR", Toast.LENGTH_SHORT).show();

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/velocity"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:textSize="20sp"
         android:importantForAutofill="no"
         app:layout_constraintBottom_toTopOf="@id/firstVelocity_for_acceleration"

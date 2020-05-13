@@ -44,7 +44,7 @@ public class ArchimedesGravAccFragment extends BaseFragment {
                     tV.setText(String.valueOf(res));
                     CalculationActivity.hideKeyboard(getActivity());
                 } else {
-                    Toast.makeText(getContext(), "ERROR", Toast.LENGTH_SHORT);
+                    Toast.makeText(getContext(), "ERROR", Toast.LENGTH_SHORT).show();
                 }
             }
         });

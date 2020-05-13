@@ -42,6 +42,7 @@
         android:hint="@string/volume"
         android:inputType="numberDecimal"
         android:textSize="20sp"
+        android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/density_for_archimedesForceGravAcc" />

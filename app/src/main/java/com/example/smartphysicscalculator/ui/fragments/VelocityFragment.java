@@ -38,7 +38,7 @@ public class VelocityFragment extends BaseFragment {
                     double num1 = Double.parseDouble(et1.getText().toString());
                     double num2 = Double.parseDouble(et2.getText().toString());
                     double res = num1 / num2;
-                    tV.setText(Double.toString(res));
+                    tV.setText(String.valueOf(res));
                     CalculationActivity.hideKeyboard(getActivity());
                 } else {
                     Toast.makeText(getContext(), "ERROR", Toast.LENGTH_SHORT).show();

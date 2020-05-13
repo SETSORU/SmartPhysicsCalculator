@@ -15,6 +15,7 @@
         android:hint="@string/frictionalForce"
         android:inputType="numberDecimal"
         android:textSize="20sp"
+        android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,6 +28,7 @@
         android:hint="@string/frictionalRatio"
         android:inputType="numberDecimal"
         android:textSize="20sp"
+        android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/frictionalForce_for_normalForce" />
